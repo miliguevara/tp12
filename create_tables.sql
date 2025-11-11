@@ -1,0 +1,10 @@
+CREATE DATABASE IF NOT EXISTS inventario_db_milagros;
+USE inventario_db_milagros;
+CREATE TABLE IF NOT EXISTS productos_milagros (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  sku VARCHAR(50) NOT NULL UNIQUE,
+  nombre VARCHAR(200) NOT NULL,
+  precio DECIMAL(10,2) DEFAULT 0.00,
+  stock INT DEFAULT 0,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
